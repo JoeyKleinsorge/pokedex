@@ -16,7 +16,6 @@ const fetchPokemon = async () => {
 	});
 	displayPokemon(pokemon);
 };
-
 const displayPokemon = (pokemon) => {
 	const pokemonHTMLString = pokemon
 		.map(
@@ -41,7 +40,6 @@ const selectPokemon = async (id) => {
 		displayPopup(pokecCache[id]);
 	}
 };
-
 const displayPopup = (pokeman) => {
 	const type = pokeman.types.map((type) => type.type.name).join(', ');
 	const paddedIndex = ('00' + pokeman.id).slice(-3);
