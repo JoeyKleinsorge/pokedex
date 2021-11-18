@@ -45,17 +45,17 @@ const displayPopup = (pokeman) => {
 	const paddedIndex = ('00' + pokeman.id).slice(-3);
 	const image = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${paddedIndex}.png`;
 	const htmlString = `
-	<div class="popup">
-		<button id="closeBtn" onclick="closePopup()
-		">Close</button>
-		<div class="card">
-        	<img class="card-image" src="${image}"/>
-        	<h2 class="card-title">${pokeman.id}. ${pokeman.name}</h2>
-			<p><small>Height: </small>${pokeman.height} inches
-			 | <small>Weight: </small>${pokeman.weight} lbs
-			 | <small>Type: </small>${type}
-    	</div>
-	</div>`;
+  <div class="popup">
+    <button id="closeBtn" onclick="closePopup()
+    ">Close</button>
+    <div class="card">
+          <img class="card-image" src="${image}"/>
+          <h2 class="card-title">${pokeman.id}. ${pokeman.name}</h2>
+      <p><small>Height: </small>${pokeman.height} inches
+       | <small>Weight: </small>${pokeman.weight} lbs
+       | <small>Type: </small>${type}
+      </div>
+  </div>`;
 	pokedex.innerHTML = htmlString + pokedex.innerHTML;
 	console.log(htmlString);
 };
